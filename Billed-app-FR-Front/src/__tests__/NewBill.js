@@ -28,12 +28,6 @@ describe("Given I am connected as an employee", () => {
       const mailIcon = screen.getByTestId("icon-mail");
       expect(mailIcon).toBeTruthy();
     });
-
-    test("Then ...", () => {
-      const html = NewBillUI();
-      document.body.innerHTML = html;
-      //to-do write assertion
-    });
   });
 
   // Post test Integration

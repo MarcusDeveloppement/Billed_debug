@@ -9,7 +9,7 @@ import Bills from "../containers/Bills.js";
 import userEvent from "@testing-library/user-event";
 import { ROUTES, ROUTES_PATH } from "../constants/routes.js";
 import { localStorageMock } from "../__mocks__/localStorage.js";
-import mockStore from "../__mocks__/store";
+import mockStore from "../__mocks__/store.js";
 import router from "../app/Router.js";
 
 jest.mock("../app/Store", () => mockStore);
@@ -50,7 +50,7 @@ describe("Given I am connected as an employee", () => {
 
   //Code cover containers Bills
   describe("When I click on the eye icon of a bill", () => {
-    test("It should open a modal", async () => {
+    test("Then it should open a modal", async () => {
       const onNavigate = (pathname) => {
         document.body.innerHTML = ROUTES({ pathname });
       };
@@ -85,7 +85,7 @@ describe("Given I am connected as an employee", () => {
   });
 
   describe("When I click on the New Bill button", () => {
-    test("It should open the New Bill page", async () => {
+    test("Then it should open the New Bill page", async () => {
       const onNavigate = (pathname) => {
         document.body.innerHTML = ROUTES({ pathname });
       };
